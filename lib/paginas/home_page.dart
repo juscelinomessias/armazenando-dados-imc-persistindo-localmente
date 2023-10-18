@@ -206,13 +206,6 @@ class _HomePageState extends State<HomePage> {
                             storageSharedPreferences.setString(
                                 "altura", _alturaController.text);
 
-                            // await imcRepositorio.adicionar(
-                            //     Imc(nome, peso, altura, resultadoImc));
-
-                            // _nomeController.text = "";
-                            // _pesoController.text = "";
-                            // _alturaController.text = "";
-
                             _salvar();
                             setState(() => {});
                           },
@@ -231,42 +224,6 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    // Expanded(
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                    //     child: ListView.separated(
-                    //       itemCount:
-                    //           1, // Defina o número de itens para 1 para exibir apenas o último valor
-                    //       separatorBuilder: (BuildContext context, int index) =>
-                    //           const Divider(),
-                    //       itemBuilder: (BuildContext context, int index) {
-                    //         if (_imcs.isNotEmpty) {
-                    //           final lastImc = _imcs.last;
-                    //           return ListTile(
-                    //             title: Text(
-                    //                 "IMC: ${lastImc.getResultado().toString()}"),
-                    //             subtitle: Text(
-                    //               "Nome: ${lastImc.getNome()} \nPeso: ${lastImc.getPeso().toStringAsFixed(2)} kg - Altura: ${lastImc.getAltura().toStringAsFixed(2)} m",
-                    //             ),
-                    //           );
-                    //         } else {
-                    //           return const ListTile(
-                    //             title: Center(
-                    //               child: Text(
-                    //                 "Nenhum resultado disponível.",
-                    //                 style: TextStyle(
-                    //                   fontSize: 16,
-                    //                   color: Color(0xff5a3353),
-                    //                   fontWeight: FontWeight.w700,
-                    //                 ),
-                    //               ),
-                    //             ),
-                    //           );
-                    //         }
-                    //       },
-                    //     ),
-                    //   ),
-                    // )
                   ],
                 ),
               ),
