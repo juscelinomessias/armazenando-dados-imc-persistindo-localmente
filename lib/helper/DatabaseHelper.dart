@@ -33,13 +33,13 @@ class DatabaseHelper {
   }
 
   _onCreate(Database db, int version) async {
-    String sqlCategoriasParceiros = "CREATE TABLE imcs ("
+    String sqlImc = "CREATE TABLE imcs ("
         "id INTEGER PRIMARY KEY AUTOINCREMENT, "
         "nome VARCHAR, "
         "peso DOUBLE, "
         "altura DOUBLE, "
         "resultado VARCHAR)";
 
-    await db.execute(sqlCategoriasParceiros);
+    await db.execute(sqlImc);
   }
 }

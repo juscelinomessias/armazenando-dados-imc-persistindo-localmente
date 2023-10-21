@@ -111,7 +111,7 @@ class _ListarImcState extends State<ListarImc> {
           return AlertDialog(
             title: const Stack(
                 alignment: Alignment.topCenter,
-                clipBehavior: Clip.none, // This is what you need.
+                clipBehavior: Clip.none,
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 40),
@@ -125,6 +125,7 @@ class _ListarImcState extends State<ListarImc> {
                     ),
                   ),
                   Positioned(
+                    top: -90,
                     child: CircleAvatar(
                       backgroundColor: Color(0xff533753),
                       radius: 60,
@@ -134,7 +135,6 @@ class _ListarImcState extends State<ListarImc> {
                         size: 60,
                       ),
                     ),
-                    top: -90,
                   )
                 ]),
             content: const Text(
@@ -195,8 +195,8 @@ class _ListarImcState extends State<ListarImc> {
     List<Imc> listaTemporaria = [];
 
     for (var item in imcsRecuperados) {
-      Imc servico = Imc.fromMap(item);
-      listaTemporaria.add(servico);
+      Imc imc = Imc.fromMap(item);
+      listaTemporaria.add(imc);
     }
 
     setState(() {
@@ -216,13 +216,13 @@ class _ListarImcState extends State<ListarImc> {
     // Remove o SnackBar caso esteja aberto
     ScaffoldMessenger.of(context).clearSnackBars();
 
-    // Exibe uma mensagem quando a Categora é criada
+    // Exibe uma mensagem quando o IMC é excluído
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Padding(
           padding: EdgeInsets.symmetric(vertical: 14),
           child: Text(
-            "IMC Excluído com sucesso!",
+            "IMC excluído com sucesso!",
             style: TextStyle(
               color: Color(0xff000000),
               fontSize: 17,

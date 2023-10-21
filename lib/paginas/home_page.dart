@@ -255,7 +255,7 @@ class _HomePageState extends State<HomePage> {
     // Remove o SnackBar caso esteja aberto
     ScaffoldMessenger.of(context).clearSnackBars();
 
-    // Exibe uma mensagem quando a Categora é criada
+    // Exibe uma mensagem quando o IMC é criado
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Padding(

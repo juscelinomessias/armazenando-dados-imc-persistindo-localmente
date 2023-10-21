@@ -1,4 +1,4 @@
-import 'package:aprimorando_calculadora_de_imc/paginas/ListarImcs.dart';
+import 'package:aprimorando_calculadora_de_imc/paginas/listarImcs.dart';
 import 'package:aprimorando_calculadora_de_imc/repositorios/imc_repositorio.dart';
 import 'package:flutter/material.dart';
 
